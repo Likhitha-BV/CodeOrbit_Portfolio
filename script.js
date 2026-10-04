@@ -1,5 +1,3 @@
-
-
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
@@ -7,10 +5,22 @@ menuBtn.addEventListener("click", () => {
 
     navLinks.classList.toggle("show");
 
+    const icon = menuBtn.querySelector("i");
+
     if (navLinks.classList.contains("show")) {
-        menuBtn.textContent = "✕";
+
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+
+        menuBtn.setAttribute("aria-label", "Close menu");
+
     } else {
-        menuBtn.textContent = "☰";
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+        menuBtn.setAttribute("aria-label", "Open menu");
+
     }
 
 });
@@ -22,12 +32,16 @@ document.querySelectorAll(".nav-link").forEach(link => {
 
         navLinks.classList.remove("show");
 
-        menuBtn.textContent = "☰";
+        const icon = menuBtn.querySelector("i");
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+        menuBtn.setAttribute("aria-label", "Open menu");
 
     });
 
 });
-
 
 
 const typingElement = document.getElementById("typing");
@@ -51,7 +65,10 @@ function typeEffect() {
     if (!deleting) {
 
         typingElement.textContent =
-            currentWord.substring(0, characterIndex + 1);
+            currentWord.substring(
+                0,
+                characterIndex + 1
+            );
 
         characterIndex++;
 
@@ -62,12 +79,16 @@ function typeEffect() {
             setTimeout(typeEffect, 1500);
 
             return;
+
         }
 
     } else {
 
         typingElement.textContent =
-            currentWord.substring(0, characterIndex - 1);
+            currentWord.substring(
+                0,
+                characterIndex - 1
+            );
 
         characterIndex--;
 
@@ -77,7 +98,7 @@ function typeEffect() {
 
             wordIndex++;
 
-            if (wordIndex === words.length) {
+            if (wordIndex >= words.length) {
                 wordIndex = 0;
             }
 
@@ -89,13 +110,44 @@ function typeEffect() {
         typeEffect,
         deleting ? 60 : 100
     );
+
 }
+
 
 typeEffect();
 
 
-
 const themeBtn = document.getElementById("themeBtn");
+
+
+function updateThemeIcon() {
+
+    const icon = themeBtn.querySelector("i");
+
+    if (document.body.classList.contains("dark")) {
+
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+
+        themeBtn.setAttribute(
+            "aria-label",
+            "Switch to light theme"
+        );
+
+    } else {
+
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+
+        themeBtn.setAttribute(
+            "aria-label",
+            "Switch to dark theme"
+        );
+
+    }
+
+}
+
 
 themeBtn.addEventListener("click", () => {
 
@@ -103,17 +155,15 @@ themeBtn.addEventListener("click", () => {
 
     if (document.body.classList.contains("dark")) {
 
-        themeBtn.textContent = "☀️";
-
         localStorage.setItem("theme", "dark");
 
     } else {
 
-        themeBtn.textContent = "🌙";
-
         localStorage.setItem("theme", "light");
 
     }
+
+    updateThemeIcon();
 
 });
 
@@ -122,9 +172,10 @@ if (localStorage.getItem("theme") === "dark") {
 
     document.body.classList.add("dark");
 
-    themeBtn.textContent = "☀️";
 }
 
+
+updateThemeIcon();
 
 
 const filters = document.querySelectorAll(".filter");
@@ -135,23 +186,22 @@ filters.forEach(filter => {
 
     filter.addEventListener("click", () => {
 
-        /* Remove active state */
-
         filters.forEach(button => {
             button.classList.remove("active");
         });
 
         filter.classList.add("active");
 
-
         const category = filter.dataset.filter;
-
 
         projects.forEach(project => {
 
+            const projectCategory =
+                project.dataset.category;
+
             if (
                 category === "all" ||
-                project.dataset.category === category
+                projectCategory === category
             ) {
 
                 project.classList.remove("hidden");
@@ -169,6 +219,16 @@ filters.forEach(filter => {
 });
 
 
+function showProjectMessage(event) {
+
+    event.preventDefault();
+
+    alert(
+        "This is a demo project link. Replace the '#' with your actual project URL."
+    );
+
+}
+
 
 const contactForm =
     document.getElementById("contactForm");
@@ -177,10 +237,9 @@ const formStatus =
     document.getElementById("formStatus");
 
 
-contactForm.addEventListener("submit", (event) => {
+contactForm.addEventListener("submit", event => {
 
     event.preventDefault();
-
 
     const name =
         document.getElementById("name").value.trim();
@@ -208,6 +267,7 @@ contactForm.addEventListener("submit", (event) => {
             "Please fill in all fields.";
 
         return;
+
     }
 
 
@@ -223,6 +283,7 @@ contactForm.addEventListener("submit", (event) => {
             "Please enter a valid email address.";
 
         return;
+
     }
 
 
@@ -231,27 +292,14 @@ contactForm.addEventListener("submit", (event) => {
     formStatus.textContent =
         `Thanks ${name}! Your message has been submitted.`;
 
-
     contactForm.reset();
 
 });
 
 
-
-function showProjectMessage(event) {
-
-    event.preventDefault();
-
-    alert(
-        "This is a demo project link. Replace the '#' in the HTML with your actual project URL."
-    );
-
-}
-
-
-
 document.getElementById("year").textContent =
     new Date().getFullYear();
+
 
 const topBtn =
     document.getElementById("topBtn");
@@ -285,6 +333,10 @@ topBtn.addEventListener("click", () => {
 const sections =
     document.querySelectorAll("section");
 
+const navigationLinks =
+    document.querySelectorAll(".nav-link");
+
+
 window.addEventListener("scroll", () => {
 
     let current = "";
@@ -292,18 +344,25 @@ window.addEventListener("scroll", () => {
     sections.forEach(section => {
 
         const sectionTop =
-            section.offsetTop - 150;
+            section.offsetTop - 180;
 
-        if (window.scrollY >= sectionTop) {
+        const sectionHeight =
+            section.offsetHeight;
 
-            current = section.getAttribute("id");
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+
+            current =
+                section.getAttribute("id");
 
         }
 
     });
 
 
-    document.querySelectorAll(".nav-link").forEach(link => {
+    navigationLinks.forEach(link => {
 
         link.classList.remove("active");
 

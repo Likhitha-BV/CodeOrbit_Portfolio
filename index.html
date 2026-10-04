@@ -3,436 +3,653 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Project</title>
 
-    <title>Portofolio project</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-
-   <header class="header">
+<header class="header">
     <nav class="navbar">
 
-        <a href="#home" class="logo">   Portfolio<span>.</span>   </a>
+        <a href="#home" class="logo">
+            Portfolio<span>.</span>
+        </a>
 
-        <button   class="menu-btn"  id="menuBtn" aria-label="Open menu" >
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" type="button">
             <i class="fa-solid fa-bars"></i>
         </button>
 
         <ul class="nav-links" id="navLinks">
+
             <li>
                 <a href="#home" class="nav-link active">
-                    <i class="fa-solid fa-house"></i> Home </a>
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
             </li>
 
             <li>
                 <a href="#about" class="nav-link">
-                    <i class="fa-solid fa-user"></i>  About </a>
+                    <i class="fa-solid fa-user"></i>
+                    About
+                </a>
             </li>
 
             <li>
                 <a href="#skills" class="nav-link">
-                    <i class="fa-solid fa-code"></i> Skills  </a>
+                    <i class="fa-solid fa-code"></i>
+                    Skills
+                </a>
             </li>
 
             <li>
                 <a href="#projects" class="nav-link">
-                    <i class="fa-solid fa-folder-open"></i> Projects </a> 
+                    <i class="fa-solid fa-folder-open"></i>
+                    Projects
+                </a>
+            </li>
+
             <li>
                 <a href="#contact" class="nav-link">
-                    <i class="fa-solid fa-envelope"></i> Contact  </a>
+                    <i class="fa-solid fa-envelope"></i>
+                    Contact
+                </a>
             </li>
+
         </ul>
 
-        <button  class="theme-btn" id="themeBtn" aria-label="Toggle theme" >
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme" type="button">
             <i class="fa-solid fa-moon"></i>
         </button>
 
     </nav>
 </header>
 
-    <main>
+<main>
 
-       <section id="home" class="hero">
+    <section id="home" class="hero">
 
-    <div class="hero-bg"></div>
+        <div class="hero-bg"></div>
 
-    <div class="hero-content">
+        <div class="hero-content">
 
-        <p class="hello-text">Hi There,</p>
+            <p class="hello-text">Hi There,</p>
 
-        <h1>I'm <span>Likhitha B.V</span> </h1>
+            <h1>
+                I'm <span>Likhitha B.V</span>
+            </h1>
 
-        <h2> I Am Into<span id="typing"></span> </h2>
+            <h2>
+                I Am Into <span id="typing"></span>
+            </h2>
 
-        <p class="hero-description">  I'm a passionate web developer who loves creating  beautiful, responsive and user-friendly websites.  </p>
+            <p class="hero-description">
+                I'm a passionate web developer who loves creating beautiful,
+                responsive and user-friendly websites.
+            </p>
 
-        <div class="hero-buttons">
+            <div class="hero-buttons">
 
-            <a href="#about" class="btn primary-btn">   About Me
-                <i class="fa-solid fa-arrow-down"></i> </a>
+                <a href="#about" class="btn primary-btn">
+                    About Me
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+
+            </div>
+
+            <div class="social-links">
+
+                <a href="#" target="_blank" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="#" target="_blank" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" target="_blank" aria-label="Telegram">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+
+                <a href="#contact" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="#contact" aria-label="Contact">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+
+            </div>
 
         </div>
 
-        <div class="social-links">
+        <div class="hero-image">
 
-            <a href="#" target="_blank" aria-label="LinkedIn"> <i class="fa-brands fa-linkedin-in"></i>  </a>
-
-            <a href="#" target="_blank" aria-label="GitHub"> <i class="fa-brands fa-github"></i></a>
-
-            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i> </a>
-
-            <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i> </a>
-
-            <a href="#contact" aria-label="Email"><i class="fa-solid fa-envelope"></i> </a>
-
-            <a href="#contact" aria-label="Contact"> <i class="fa-solid fa-phone"></i> </a>
+            <div class="image-circle">
+                <img src="girl.png" alt="Likhitha BV">
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-    <div class="hero-image">
 
-        <div class="image-circle">
-            <img src="girl.png" alt="Likhitha BV" >
+    <section id="about" class="section">
+
+        <div class="container">
+
+            <p class="section-label">
+                GET TO KNOW ME
+            </p>
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+            <div class="about-grid">
+
+                <div class="about-image">
+
+                    <div class="computer-illustration">
+
+                        <div class="monitor">
+
+                            <div class="monitor-screen">
+
+                                <div class="code-line long"></div>
+                                <div class="code-line medium"></div>
+                                <div class="code-line short"></div>
+                                <div class="code-line long"></div>
+                                <div class="code-line medium"></div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="monitor-stand"></div>
+
+                        <div class="monitor-base"></div>
+
+                        <div class="keyboard">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="about-card">
+
+                        <h3>
+                            Web Developer
+                        </h3>
+
+                        <p>
+                            Creating modern digital experiences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="about-content">
+
+                    <h3>
+                        Turning ideas into websites.
+                    </h3>
+
+                    <p>
+                        I'm a passionate web developer who enjoys creating
+                        websites that are simple, beautiful and easy to use.
+                    </p>
+
+                    <p>
+                        I focus on responsive design, clean code and creating
+                        good user experiences.
+                    </p>
+
+                    <div class="about-info">
+
+                        <div>
+                            <strong>Name:</strong>
+                            <span>Likhitha B V</span>
+                        </div>
+
+                        <div>
+                            <strong>Email:</strong>
+                            <span>likhithabv@example.com</span>
+                        </div>
+
+                        <div>
+                            <strong>Location:</strong>
+                            <span>Karnataka</span>
+                        </div>
+
+                    </div>
+
+                    <a href="#contact" class="btn primary-btn">
+                        Contact Me
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-        <section id="about" class="section">
+    <section id="skills" class="section skills-section">
 
-            <div class="container">
+        <div class="container">
 
-                <p class="section-label">GET TO KNOW ME</p>
+            <p class="section-label">
+                WHAT I KNOW
+            </p>
 
-                <h2 class="section-title">  About Me  </h2>
+            <h2 class="section-title">
+                My Skills
+            </h2>
 
-                <div class="about-grid">
+            <div class="skills-grid">
 
-                    <div class="about-image">
-                        <div class="about-card">
-                            <h3>Web Developer</h3>
-                            <p>Creating modern digital experiences. </p>
-                        </div>
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        HTML
                     </div>
 
-                    <div class="about-content">
+                    <h3>
+                        HTML5
+                    </h3>
 
-                        <h3> Turning ideas into websites. </h3>
+                    <p>
+                        90%
+                    </p>
 
-                        <p> I'm a passionate web developer who enjoys creating websites that are simple, beautiful and easy to use.  </p>
-
-                        <p> I focus on responsive design, clean code and creating good user experiences.  </p>
-
-                        <div class="about-info">
-
-                            <div>
-                                <strong>Name:</strong>  <span>Likitha B V</span>
-                            </div>
-
-                            <div>
-                                <strong>Email:</strong>
-                                <span>Likithabv@example.com</span>
-                            </div>
-
-                            <div>
-                                <strong>Location:</strong>
-                                <span>Karnataka</span>
-                            </div>
-
-                           
-
-                        </div>
-
-                        <a href="#contact" class="btn primary-btn">  Contact Us </a>
-
+                    <div class="progress">
+                        <div class="progress-bar" style="width:90%"></div>
                     </div>
 
                 </div>
 
-            </div>
+                <div class="skill-card">
 
-        </section>
-
-        <section id="skills" class="section skills-section">
-
-            <div class="container">
-
-                <p class="section-label">WHAT I KNOW</p>
-
-                <h2 class="section-title"> My Skills   </h2>
-
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-                        <div class="skill-icon">HTML</div>
-                        <h3>HTML5</h3>
-                        <p>90%</p>
-
-                        <div class="progress">
-                            <div class="progress-bar" style="width:90%"></div>
-                        </div>
+                    <div class="skill-icon">
+                        CSS
                     </div>
 
-                    <div class="skill-card">
-                        <div class="skill-icon">CSS</div>
-                        <h3>CSS3</h3>
-                        <p>85%</p>
+                    <h3>
+                        CSS3
+                    </h3>
 
-                        <div class="progress">
-                            <div class="progress-bar" style="width:85%"></div>
-                        </div>
+                    <p>
+                        85%
+                    </p>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:85%"></div>
                     </div>
 
-                    <div class="skill-card">
-                        <div class="skill-icon">JS</div>
-                        <h3>JavaScript</h3>
-                        <p>80%</p>
+                </div>
 
-                        <div class="progress">
-                            <div class="progress-bar" style="width:80%"></div>
-                        </div>
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        JS
                     </div>
 
-                    <div class="skill-card">
-                        <div class="skill-icon">GIT</div>
-                        <h3>Git</h3>
-                        <p>75%</p>
+                    <h3>
+                        JavaScript
+                    </h3>
 
-                        <div class="progress">
-                            <div class="progress-bar" style="width:75%"></div>
-                        </div>
+                    <p>
+                        80%
+                    </p>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:80%"></div>
+                    </div>
+
+                </div>
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        GIT
+                    </div>
+
+                    <h3>
+                        Git
+                    </h3>
+
+                    <p>
+                        75%
+                    </p>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:75%"></div>
                     </div>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
 
-        <section id="projects" class="section">
+    </section>
 
-            <div class="container">
 
-                <p class="section-label">MY WORK</p>
+    <section id="projects" class="section">
 
-                <h2 class="section-title">
-                    Recent Projects
-                </h2>
+        <div class="container">
 
-                <div class="filters">
+            <p class="section-label">
+                MY WORK
+            </p>
 
-                    <button class="filter active" data-filter="all">  All </button>
+            <h2 class="section-title">
+                Recent Projects
+            </h2>
 
-                    <button class="filter" data-filter="web">  Websites</button>
+            <div class="filters">
 
-                    <button class="filter" data-filter="javascript">JavaScript </button>
-
-                </div>
-
-
-                <div class="projects-grid">
-
-                    <article class="project-card"  data-category="web">
-
-                        <div class="project-top purple">
-                            <span>01</span>
-                        </div>
-
-                        <div class="project-content">
-
-                            <h3>Portfolio Website</h3>
-
-                            <p> A responsive personal portfolio website built with HTML and CSS. </p>
-
-                            <div class="tags">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                            </div>
-
-                           
-
-                        </div>
-
-                  
-                    <article class="project-card" data-category="javascript">
-
-                        <div class="project-top blue">
-                            <span>02</span>
-                        </div>
-
-                        <div class="project-content">
-
-                            <h3>To-Do Application</h3>
-
-                            <p>  A task manager with add, delete and complete functionality. </p>
-
-                            <div class="tags">
-                                <span>JavaScript</span>
-                                <span>CSS</span>
-                            </div>
-
-                          
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="project-card"  data-category="web">
-
-                        <div class="project-top green">
-                            <span>03</span>
-                        </div>
-
-                        <div class="project-content">
-
-                            <h3>Business Landing Page</h3>
-
-                            <p>  A responsive landing page for a fictional business. </p>
-
-                            <div class="tags">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                            </div>
-
-                         
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-<section id="contact" class="section contact-section">
-
-    <div class="container">
-
-        <p class="section-label">GET IN TOUCH</p>
-
-        <h2 class="section-title">
-            Contact Me
-        </h2>
-
-        <div class="contact-grid">
-
-
-            <div class="contact-info">
-
-                <h3>
-                    Let's work together.
-                </h3>
-
-                <p> Have an idea or project? Send me a message and I'll get back to you.</p>
-
-
-                <div class="contact-item">
-
-                    <span>
-                        <i class="fa-solid fa-envelope"></i>
-                    </span>
-
-                    <div>
-                        <strong>Email</strong>
-                        <p>likhithabv@example.com</p>
-                    </div>
-
-                </div>
-
-                <div class="contact-item">
-
-                    <span>
-                        <i class="fa-solid fa-phone"></i>
-                    </span>
-
-                    <div>
-                        <strong>Phone</strong>
-                        <p>+91 98765 43210</p>
-                    </div>
-
-                </div>
-
-                <div class="contact-item">
-
-                    <span>
-                        <i class="fa-solid fa-location-dot"></i>
-                    </span>
-
-                    <div>
-                        <strong>Location</strong>
-                        <p>Karnataka</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <form id="contactForm" class="contact-form">
-
-                <div class="input-group">
-
-                    <label for="name"> Name </label>
-
-                    <input type="text" id="name" placeholder="Your name" required>
-
-                </div>
-
-
-                <div class="input-group">
-
-                    <label for="email"> Email </label>
-
-                    <input type="email"  id="email" placeholder="you@example.com" required>
-
-                </div>
-
-
-                <div class="input-group">
-
-                    <label for="subject">Subject </label>
-
-                    <input type="text"  id="subject" placeholder="Project subject"required >
-
-                </div>
-
-
-                <div class="input-group">
-
-                    <label for="message">   Message </label>
-
-                    <textarea id="message" rows="6" placeholder="Write your message..." required></textarea>
-
-                </div>
-
-
-                <button type="submit" class="btn primary-btn" >
-                    <i class="fa-solid fa-paper-plane"></i> Send Message
+                <button class="filter active" data-filter="all" type="button">
+                    All
                 </button>
 
-                <p id="formStatus"></p>
+                <button class="filter" data-filter="web" type="button">
+                    Websites
+                </button>
 
-            </form>
+                <button class="filter" data-filter="javascript" type="button">
+                    JavaScript
+                </button>
+
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card" data-category="web">
+
+                    <div class="project-top purple">
+
+                        <i class="fa-solid fa-globe"></i>
+
+                        <span>01</span>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            Portfolio Website
+                        </h3>
+
+                        <p>
+                            A responsive personal portfolio website built
+                            with HTML and CSS.
+                        </p>
+
+                        <div class="tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+
+                        <a href="#" class="project-link" onclick="showProjectMessage(event)">
+                            View Project
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-card" data-category="javascript">
+
+                    <div class="project-top blue">
+
+                        <i class="fa-solid fa-list-check"></i>
+
+                        <span>02</span>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            To-Do Application
+                        </h3>
+
+                        <p>
+                            A task manager with add, delete and complete
+                            functionality.
+                        </p>
+
+                        <div class="tags">
+                            <span>JavaScript</span>
+                            <span>CSS</span>
+                        </div>
+
+                        <a href="#" class="project-link" onclick="showProjectMessage(event)">
+                            View Project
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-card" data-category="web">
+
+                    <div class="project-top green">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        <span>03</span>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            Business Landing Page
+                        </h3>
+
+                        <p>
+                            A responsive landing page for a fictional business.
+                        </p>
+
+                        <div class="tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+
+                        <a href="#" class="project-link" onclick="showProjectMessage(event)">
+                            View Project
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-    </main>
+    <section id="contact" class="section contact-section">
+
+        <div class="container">
+
+            <p class="section-label">
+                GET IN TOUCH
+            </p>
+
+            <h2 class="section-title">
+                Contact Me
+            </h2>
+
+            <div class="contact-grid">
+
+                <div class="contact-info">
+
+                    <h3>
+                        Let's work together.
+                    </h3>
+
+                    <p>
+                        Have an idea or project? Send me a message and
+                        I'll get back to you.
+                    </p>
+
+                    <div class="contact-item">
+
+                        <span>
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+
+                        <div>
+                            <strong>Email</strong>
+                            <p>likhithabv@example.com</p>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <span>
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+91 98765 43210</p>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+
+                        <div>
+                            <strong>Location</strong>
+                            <p>Karnataka</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <form id="contactForm" class="contact-form">
+
+                    <div class="input-group">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Your name"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="subject">
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            placeholder="Project subject"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="6"
+                            placeholder="Write your message..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+                    <button type="submit" class="btn primary-btn">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Send Message
+
+                    </button>
+
+                    <p id="formStatus"></p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
 
 <footer>
 
@@ -443,13 +660,19 @@
 
 </footer>
 
-<button id="topBtn" class="top-btn" aria-label="Scroll to top" title="Scroll to top">
+
+<button
+    id="topBtn"
+    class="top-btn"
+    aria-label="Scroll to top"
+    title="Scroll to top"
+    type="button"
+>
     <i class="fa-solid fa-arrow-up"></i>
 </button>
 
 
 <script src="script.js"></script>
-
 
 </body>
 </html>
